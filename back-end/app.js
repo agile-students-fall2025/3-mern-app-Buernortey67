@@ -78,5 +78,19 @@ app.post('/messages/save', async (req, res) => {
   }
 })
 
+// About Us JSON route
+app.get('/api/about', (req, res) => {
+  res.json({
+    title: "About Us",
+    name: "Bismark Buernortey Buer",
+    paragraphs: [
+      "I’m a Computer Science student focused on software engineering, data, and interactive media.",
+      "I’ve built projects from web apps to VR simulations and enjoy mentoring students in coding.",
+      "I’m passionate about using technology to solve real-world problems and create opportunity."
+    ],
+    imageUrl: "http://localhost:7002/me.jpg" 
+  });
+});
+
 // export the express app we created to make it available to other modules
 module.exports = app // CommonJS export style!
